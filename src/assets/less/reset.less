@@ -1,0 +1,23 @@
+html, body {
+	height: 100%;
+	color: #333;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5 {
+	font-weight: 400;
+}
+ul,li{
+	list-style:none;
+}
+//HACK 针对火狐下css hack
+@-moz-document url-prefix() {
+	html, body {
+		overflow: hidden;
+	}
+	.page-main{
+		padding-bottom: 60px;
+	}
+}

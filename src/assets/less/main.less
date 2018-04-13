@@ -1,0 +1,339 @@
+@import "var";
+@import "animation";
+//@import "./../fonts/index";
+
+.primary-color {
+  color: @primayColor;
+}
+
+.danger-color {
+  color: @dangerColor;
+}
+
+.sticky-box {
+  position: sticky;
+  left: 0;
+  top: 0;
+  background: #fff;
+  z-index: 100;
+}
+
+.danger-btn {
+  background-color: @dangerColor;
+  border-color: @dangerColor;
+  &:hover, &:focus, &:active {
+    background-color: lighten(@dangerColor, 10%);
+    border-color: lighten(@dangerColor, 10%);
+  }
+  &.ant-btn-clicked:after {
+    border: 0 solid @dangerColor;
+  }
+}
+
+.warn-btn {
+  background-color: @warnColor;
+  border-color: @warnColor;
+  &:hover, &:focus {
+    background-color: lighten(@warnColor, 10%);
+    border-color: lighten(@warnColor, 10%);
+  }
+  &.ant-btn-clicked:after {
+    border: 0 solid @warnColor;
+  }
+}
+
+.disabled-btn {
+  background-color: lighten(@grayColor, 10%);
+  border-color: @grayColor;
+  &:hover, &:focus {
+    background-color: lighten(@grayColor, 10%);
+    border-color: @grayColor;
+  }
+  &.ant-btn-clicked:after {
+    border: 0 solid @grayColor;
+  }
+}
+
+#root {
+  height: 100%;
+  overflow: hidden;
+  .danger-btn {
+    .danger-btn
+  }
+  .warn-btn {
+    .warn-btn
+  }
+  button[disabled] {
+    .disabled-btn
+  }
+}
+
+.ant-confirm-confirm .ant-confirm-body > .anticon-check-circle {
+  color: @primayColor;
+}
+
+.ant-message-notice .ant-message-notice-content {
+  padding: 10px 20px;
+}
+
+.app-layout {
+  height: 100%;
+  .page-title-bar {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    border-bottom: 1px solid #dedede;
+    ul {
+      display: flex;
+      align-items: center;
+      height: 30px;
+      padding: 0 10px;
+      background-color: #eee;
+    }
+    .back-btn {
+      height: 30px;
+      padding: 0 30px;
+      background: #eee;
+      margin-left: auto;
+      cursor: pointer;
+      overflow: hidden;
+      &:hover {
+        background: #dbdbdb;
+      }
+      & > .iconfont {
+        font-size: 20px;
+      }
+    }
+  }
+  .ant-layout {
+    height: 100%;
+  }
+  .ant-layout-header {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    border-bottom: 1px solid #dedede;
+    padding: 0;
+    background: #fff;
+    .title {
+      margin-left: 10px;
+      font-size: 24px;
+      color: @primayColor;
+    }
+  }
+  .ant-menu-dark {
+    background-color: #293846;
+  }
+  .ant-menu-dark .ant-menu-inline.ant-menu-sub {
+    background-color: #2f4050;
+  }
+
+
+  .ant-layout-content {
+    background: @bgGray;
+  }
+  .ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+    text-align: center;
+  }
+
+  .wing-space {
+    margin: 0 20px;
+  }
+  .panel-title {
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-right: 60px;
+    }
+  }
+  .divider {
+    height: 10px;
+    margin-bottom: 10px;
+    background-color: @bgGray;
+  }
+  .panel-filter {
+    padding: 20px;
+    border: 1px solid @bgGray;
+    margin-bottom: 10px;
+  }
+  .ant-spin-nested-loading {
+    & > div {
+      & > .ant-spin {
+        .ant-spin-dot, .ant-spin-text {
+          top: 20%;
+        }
+      }
+    }
+  }
+}
+
+.page-main {
+  .ant-spin-nested-loading > div > .ant-spin {
+    max-height: 100%;
+  }
+}
+
+.user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  color: #fff;
+  .user-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    background: #acb3b9;
+    border-radius: 22px;
+    margin-right: 20px;
+    overflow: hidden;
+    i {
+      font-size: 16px;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  a {
+    color: #fff;
+  }
+}
+
+.toggle-menu {
+  text-align: right;
+  padding: 10px;
+  font-size: 14px;
+  color: #fff;
+  .anticon {
+    cursor: pointer;
+  }
+}
+
+.ant-layout-sider-collapsed {
+  .ant-dropdown-trigger {
+    display: none;
+  }
+  .toggle-menu {
+    text-align: center;
+  }
+  .user-photo {
+    margin-right: 0;
+  }
+  .ant-menu-sub, .nav-text, .user-name {
+    display: none;
+  }
+  .ant-menu-submenu-inline > .ant-menu-submenu-title:after {
+    display: none;
+  }
+  .ant-menu-submenu, .ant-menu-item {
+    .anticon {
+      font-size: 16px;
+    }
+  }
+}
+
+//-------------------home首页-------------------
+.home-container{
+  display: flex;
+  justify-content: center;
+  .welcome{
+    padding-top:30px;
+    h1{
+      font-size: 24px;
+    }
+
+  }
+}
+
+.page-right-container{
+  padding: 20px;
+  & > .title{
+    padding:10px;
+  }
+  .search-bar{
+    display: flex;
+    padding:0 10px;
+    margin-bottom: 10px;
+    .bar-r{
+      margin-left: auto;
+    }
+  }
+  .ant-form-item{
+    margin-bottom:0;
+  }
+  .show-code-icon{
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+//查询账单
+.jsonview-formater {
+  //position: absolute;
+  left: 0;
+  top: 55px;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+
+  .formater-box{
+    display: flex;
+  }
+  .formater-box-left,.formater-box-right{
+    flex:1;
+    overflow:auto;
+    max-height: 500px;
+    min-height: 300px;
+  }
+  .formater-box-right{
+    color: #fff;
+    background-color: #333;
+    border: 3px solid #27b0ea;
+    padding:10px;
+    line-height: 1.5;
+    font-family: Menlo, Monaco, Consolas, "Helvetica Neue", Helvetica;
+  }
+  .format-error{
+    color:#f00;
+    background-color: #fed7d7;
+    border-radius: 5px;
+    padding:10px;
+  }
+  textarea {
+    display: block;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #f8f8f8;
+    &:focus{
+      color: #495057;
+      background-color: #fff;
+      border-color: #80bdff;
+      outline: 0;
+      box-shadow:inset 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+  }
+
+}
+.ant-form-inline{
+  .ant-form-item.format-item-row{
+    display: block;
+    & > div{
+      display: block;
+    }
+    & >div:first-child{
+      text-align: left;
+    }
+  }
+}

@@ -30,7 +30,7 @@ function UserInfo(props) {
     return (
         <div className="user-info">
             <div className="user-photo">
-                {brandLogoImg ? <img src={`http://res.hualala.com/${brandLogoImg}`}/> : <Icon type="user"/>}
+                {brandLogoImg ? <img src={`http://res.leesx.com/${brandLogoImg}`}/> : <Icon type="user"/>}
             </div>
             {/*<Dropdown overlay={menu}>
                 <a className="ant-dropdown-link">

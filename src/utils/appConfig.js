@@ -4,17 +4,17 @@
 
 
 //======================================================
-// dohko 环境 "http://dohko.api.transformer.hualala.com"
-// 线上环境 "http://api.transformer.hualala.com"
+// dohko 环境 "http://dev.xxxx.com"
+// 线上环境 "http://xxxxx.com"
 //======================================================
 const
     {protocol, host, href} = window.location,
     __ENV__ = process.env.NODE_ENV === 'production',// 是否为生产环境
-    //baseURL = process.env.SERVER_ENV === 'dohko' ? 'http://dohko.api.transformer.hualala.com' : 'http://api.transformer.hualala.com',
+    //baseURL = process.env.SERVER_ENV === 'dev' ? 'http://xxxx.com' : 'http://xxxx.com',
     baseURL = '/',
     redirectURL = process.env.LOGIN_RE_URL === 'dohko'
-        ? 'http://dohko.login.hualala.com:31251/login?redirectURL=http://dohko.api.transformer.hualala.com'
-        : 'http://passport.hualala.com/login?redirectURL=http://api.transformer.hualala.com';
+        ? 'http://xxx.com'
+        : 'http://xxx.com';
 
 const pagination = {
     showSizeChanger: true,

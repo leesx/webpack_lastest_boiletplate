@@ -109,7 +109,7 @@ module.exports = {
             inject  : true // 是否将js放在body的末尾
         }),
 
-        new webpack.BannerPlugin(`Copyright Hualala inc. \n update: ${BUID_TIMESTAMP}`),
+        new webpack.BannerPlugin(`Copyright Leesx inc. \n update: ${BUID_TIMESTAMP}`),
         new PreloadWebpackPlugin(),
     ],
     devServer: {
@@ -122,7 +122,7 @@ module.exports = {
             {
                 context     : ['/saas/support/**'],
                 changeOrigin: true,
-                target      : 'http://dohko.support.saas.hualala.com',
+                target      : 'http://xxxxx.com',
                 secure      : false
             }
         ],
